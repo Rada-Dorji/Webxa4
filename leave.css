@@ -1,0 +1,220 @@
+/*--------------------------------- css for leave application------------------------------- */
+.container {
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  background-color: #dfecff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.content {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  row-gap: 5px;
+  column-gap: 5px;
+  background-color: #fff;
+  max-width: 900px;
+  padding: 30px;
+  margin-top: 20px;
+  border: 2px solid whitesmoke;
+  color: black;
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 20px);
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.input-box {
+  border-color: #9b59b6;
+}
+#text-reason {
+  text-decoration-line: none;
+  border-color: #9b59b6;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+form .rbutton-details .rbutton-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form .category {
+  display: flex;
+  width: 30%;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+form .button input {
+  height: 100%;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button input:hover {
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+#leave-btn button {
+  cursor: pointer;
+  width: 20%;
+  margin-right: 50px;
+  background: linear-gradient(45deg, #277ffe, #1368e3);
+  color: white;
+  border-radius: 5px;
+}
+#leave-btn button:hover {
+  opacity: 0.7;
+}
+#leave-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#leave-btn button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px #ccc solid;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+/* leave details */
+.container2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border-collapse: collapse;
+  margin-top: 10px;
+  /* border: 2px solid red; */
+}
+#stdList th,
+#stdList td {
+  border: 2px solid rgb(73, 46, 46);
+  padding: 10px;
+  vertical-align: top;
+  border-radius: 5px;
+  /* border-collapse: collapse; */
+}
+
+#stdList {
+  /* border: 2px solid blue; */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  max-width: 900px;
+  width: 900px;
+  color: black;
+  border-collapse: collapse;
+}
+
+.input-box.error input {
+  border-color: red;
+}
+.input-box.success input {
+  border-color: #4bb543;
+}
+.input-box small {
+  color: #b00020;
+}
+
+.nestedContainer2 {
+  background-color: #fff;
+  max-width: 900px;
+  color: black;
+  min-height: 20vh;
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 1200px) {
+  #Dinput {
+    margin-right: 160px;
+    width: 100%;
+  }
+  .rbutton-details label {
+    margin-right: 20px;
+  }
+}

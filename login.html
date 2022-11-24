@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Student Form</title>
+  </head>
+  <body>
+    <div class="container1" id="container1">
+      <form action="dashboard.html" method="get" autocomplete="off">
+        <h3>Login</h3>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+            />
+            <small></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="password"
+              id="Password"
+              name="password"
+              placeholder="Password"
+            />
+            <small></small>
+          </div>
+        </div>
+        <div class="row submit-btn">
+          <button type="submit" value="Login">Login</button>
+        </div>
+
+        <p class="form-footer" style="font-size: 1rem">
+          Forgot<a href="password.html" style="text-decoration: none">
+            password?</a
+          >
+        </p>
+
+        <p class="form-footer" style="margin-top: 10px">
+          Not a member ? <a href="register.html"> Register</a>
+        </p>
+      </form>
+    </div>
+    <hr />
+
+    <script src="login.js"></script>
+  </body>
+</html>

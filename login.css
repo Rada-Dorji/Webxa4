@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(white, #ccc);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.container1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    to right,
+    rgb(92, 143, 245),
+    rgb(71, 200, 220),
+    skyblue,
+    rgb(255, 255, 255)
+  );
+  width: 480px;
+  /* max-height: 90vh; */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  animation: fadedown 1s;
+}
+.container1 h3 {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+input {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  outline: none;
+}
+
+form {
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 0.75rem 0;
+  margin: 2rem 0;
+  background: linear-gradient(45deg, #277ffe, #1368e3);
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+button:hover {
+  background: linear-gradient(45deg, #277ffe, #1368e3);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.col-2 {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-2.error input {
+  border-color: red;
+}
+.col-2.success input {
+  border-color: #4bb543;
+}
+.col-2 small {
+  color: #b00020;
+}
+
+.form-footer {
+  text-align: center;
+  color: #444;
+}
+
+.form-footer a {
+  color: orange;
+  text-decoration: none;
+}
+#register-btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+#register-btn button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px #ccc solid;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  transition: background 0.5s;
+}
+@keyframes fadedown {
+  from {
+    top: -100%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+/* Responsive layout - when screen size is 1100 at max*/
+@media screen and (max-width: 1100px) {
+  .container1 {
+    width: 60%;
+    margin-top: 0;
+  }
+  .col-1 {
+    width: 30%;
+  }
+  .col-2 {
+    width: 100%;
+  }
+}
+
+/* Responsive layout - when screen size is 800 at max*/
+@media screen and (max-width: 800px) {
+  .container1 {
+    width: 80%;
+    margin-top: 0;
+  }
+  .col-1,
+  .col-2 {
+    width: 100%;
+  }
+}

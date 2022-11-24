@@ -1,0 +1,64 @@
+table.programs {
+  background: white;
+  /* border: 10px outset rgb(20, 146, 165); */
+  border-collapse: collapse;
+  font-family: Arial, Verdana, sans-serif;
+  width: 100%;
+}
+table.programs tr {
+  height: 25px;
+}
+table.programs th,
+table.programs td {
+  border: 1px solid rgb(73, 46, 46);
+  padding: 5px;
+  vertical-align: top;
+}
+/* }
+thead>tr>th{
+    background-color: orange;
+    color: white;
+}
+th.time{
+    background-color: yellow;
+
+}
+tbody>tr>th{
+    background-color: rgb(215, 139, 76);
+}
+tfoot{
+    background-color: brown;
+    
+} */
+#Workerattendance h3 {
+  text-align: center;
+}
+#Workerattendance {
+  margin-right: 10px;
+}
+col.MonthColumn {
+  background: rgb(170, 144, 59);
+  width: 10%;
+}
+/* col.wDaycolumns {
+  background: rgb(167, 220, 80);
+  width: 11%;
+}
+col.wEndColumns {
+  background: rgb(187, 172, 90);
+  width: 17.8%;
+} */
+table.programs thead {
+  color: white;
+  background-color: rgb(177, 112, 16);
+}
+table.programs thead th:first-of-type {
+  color: white;
+  background-color: rgb(174, 184, 94);
+}
+tbody th {
+  color: aliceblue;
+}
+.programs th {
+  color: aliceblue;
+}

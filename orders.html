@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="order.css" />
+
+    <meta charset="UTF-8" />
+    <!-- for table-->
+    <link rel="stylesheet" href="table.css" />
+    <!-- for table -->
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboardContent.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".profile .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+
+        $(".notifications .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+
+        $(".show_all .link").click(function () {
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+
+        $(".close").click(function () {
+          $(".popup").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">HighLAnder</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Human Resources</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Human Resources</a></li>
+            <li><a href="complain.html">HR Complaint</a></li>
+            <li><a href="rule.html">Rules And Regulation</a></li>
+            <li><a href="calander.html">Calender</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Staff Tour</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Tour</a></li>
+            <li><a href="travel.html">Travel Authorization</a></li>
+            <li><a href="status.html">Travel Status</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Staff Service</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Service</a></li>
+            <li><a href="leave.html">Leave Application</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="resignation.html">Resignation</a></li>
+            <li><a href="publication.html">Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Inventory And Property</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventory And Property</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="profile_pic.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Kunzang</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text"></span>
+        <div class="wrapper">
+          <div class="navbar">
+            <div class="navbar_left">
+              <div class="logo">
+                <a href="#">HighLAnder</a>
+              </div>
+            </div>
+
+            <div class="navbar_right">
+              <div class="notifications">
+                <!-- <div class="icon_wrap"><i class="far fa-bell"></i></div> -->
+                <a class="icon_wrap" href="profile.html#timeline">
+                  <i class="far fa-bell"></i
+                ></a>
+              </div>
+              <div class="profile">
+                <div class="icon_wrap">
+                  <img src="profile_pic.png" alt="profile_pic" />
+                  <span class="name">Kunzang Rada</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="profile_dd">
+                  <ul class="profile_ul">
+                    <li class="profile_li">
+                      <a class="profile" href="profile.html"
+                        ><span class="picon"
+                          ><i class="fas fa-user-alt"></i> </span
+                        >Profile</a
+                      >
+                      <!-- <div class="btn">My Account</div> -->
+                    </li>
+                    <li>
+                      <a class="address" href="changePaaword.html"
+                        ><span class="picon"
+                          ><i class="fas fa-map-marker"></i></span
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="settings" href="help.html"
+                        ><span class="picon"><i class="fas fa-cog"></i></span
+                        >Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="logout" href="login.html"
+                        ><span class="picon"
+                          ><i class="fas fa-sign-out-alt"></i></span
+                        >Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orderContainer">
+        <h2>Order List</h2>
+        <form name="tableform">
+          <table width="40%" id="alignment">
+            <tr>
+              <th>Food Item</th>
+              <th></th>
+              <th>Price()</th>
+            </tr>
+            <tr>
+              <td>Chicken pizza</td>
+              <td>-</td>
+              <td>700.00</td>
+            </tr>
+            <tr>
+              <td>Vegetable Pizza</td>
+              <td>-</td>
+              <td>500.00</td>
+            </tr>
+            <tr>
+              <td>Chiken Kottu</td>
+              <td>-</td>
+              <td>300.00</td>
+            </tr>
+            <tr>
+              <td>Vegetable Kottu</td>
+              <td>-</td>
+              <td>200.00</td>
+            </tr>
+            <tr>
+              <td>Speagatti</td>
+              <td>-</td>
+              <td>120.00</td>
+            </tr>
+            <tr>
+              <td>Beef Burger</td>
+              <td>-</td>
+              <td>145.00</td>
+            </tr>
+            <tr>
+              <td>Vegatable Burger</td>
+              <td>-</td>
+              <td>110.00</td>
+            </tr>
+            <tr>
+              <td>Beef Dumpling</td>
+              <td>-</td>
+              <td>80.00</td>
+            </tr>
+            <tr>
+              <td>Cheese Dumpling</td>
+              <td>-</td>
+              <td>60.00</td>
+            </tr>
+          </table>
+          <!-- <h>HighLAnder Hotel - Order Form</h1> <br>  -->
+          <table style="background-color: aquamarine; margin-left: 100px">
+            <tr>
+              <td>Address:</td>
+              <td>
+                <input
+                  type="Address"
+                  placeholder="Enter your present address!"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Name:</td>
+              <td>
+                <input type="text" placeholder="Name" />
+              </td>
+            </tr>
+            <tr>
+              <td>Mobile:</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Mobile Number"
+                  id="mblenmb"
+                  onfocusout="checkmob()"
+                />
+              </td>
+            </tr>
+          </table>
+          <table width="80%" id="alignment">
+            <tr>
+              <th>Food Item</th>
+              <th></th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Item 1:</td>
+              <td>
+                <select id="item1">
+                  <option value="1">--Select Item--</option>
+                  <option value="Chicken pizza">Chicken pizza</option>
+                  <option value="Vegetable Pizza">Vegetable Pizza</option>
+                  <option value="Chicken Kottu">Chicken Kottu</option>
+                  <option value="Vegetable Kottu">Vegetable Kottu</option>
+                  <option value="Water Bottle ">Spheagatti</option>
+                  <option value="Beef Burger">Beef Burger</option>
+                  <option value="Vegatable Burger">Vegatable Burger</option>
+                  <option value="Beef Dumpling">Beef Dumpling</option>
+                  <option value="Chhese Dimpling">Cheese Dumpling</option>
+                </select>
+              </td>
+              <td><input type="number" value="0" id="q1" /></td>
+              <td><input type="text" id="p1" /></td>
+            </tr>
+            <tr>
+              <td>Item 2:</td>
+              <td>
+                <select id="item2">
+                  <option value="1">--Select Item--</option>
+                  <option value="Chicken pizza">Chicken pizza</option>
+                  <option value="Vegetable Pizza">Vegetable Pizza</option>
+                  <option value="Chicken Kottu">Chicken Kottu</option>
+                  <option value="Vegetable Kottu">Vegetable Kottu</option>
+                  <option value="Water Bottle ">Spheagatti</option>
+                  <option value="Beef Burger">Beef Burger</option>
+                  <option value="Vegatable Burger">Vegatable Burger</option>
+                  <option value="Beef Dumpling">Beef Dumpling</option>
+                  <option value="Chhese Dimpling">Cheese Dumpling</option>
+                </select>
+              </td>
+              <td><input type="number" value="0" id="q2" /></td>
+              <td><input type="text" id="p2" /></td>
+            </tr>
+            <tr>
+              <td>Item 3:</td>
+              <td>
+                <select id="item3">
+                  <option value="1">--Select Item--</option>
+                  <option value="Chicken pizza">Chicken pizza</option>
+                  <option value="Vegetable Pizza">Vegetable Pizza</option>
+                  <option value="Chicken Kottu">Chicken Kottu</option>
+                  <option value="Vegetable Kottu">Vegetable Kottu</option>
+                  <option value="Water Bottle ">Spheagatti</option>
+                  <option value="Beef Burger">Beef Burger</option>
+                  <option value="Vegatable Burger">Vegatable Burger</option>
+                  <option value="Beef Dumpling">Beef Dumpling</option>
+                  <option value="Chhese Dimpling">Cheese Dumpling</option>
+                </select>
+              </td>
+              <td><input type="number" value="0" id="q3" /></td>
+              <td><input type="text" id="p3" /></td>
+            </tr>
+            <tr>
+              <td>Item 4:</td>
+              <td>
+                <select id="item4">
+                  <option value="1">--Select Item--</option>
+                  <option value="Chicken pizza">Chicken pizza</option>
+                  <option value="Vegetable Pizza">Vegetable Pizza</option>
+                  <option value="Chicken Kottu">Chicken Kottu</option>
+                  <option value="Vegetable Kottu">Vegetable Kottu</option>
+                  <option value="Water Bottle ">Spheagatti</option>
+                  <option value="Beef Burger">Beef Burger</option>
+                  <option value="Vegatable Burger">Vegatable Burger</option>
+                  <option value="Beef Dumpling">Beef Dumpling</option>
+                  <option value="Chhese Dimpling">Cheese Dumpling</option>
+                </select>
+              </td>
+              <td><input type="number" value="0" id="q4" /></td>
+              <td><input type="text" id="p4" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <input
+                  type="submit"
+                  class="button"
+                  value="Create Bill"
+                  onclick="createBill()"
+                  style="width: 100%"
+                />
+              </td>
+              <td><input type="reset" class="button" value="Clear" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+    <script src="order.js"></script>
+  </body>
+</html>

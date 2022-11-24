@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="rule.css" />
+    <link rel="stylesheet" href="leave.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+        $(".notifications .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+        $(".show_all .link").click(function () {
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+        $(".close").click(function () {
+          $(".popup").hide();
+        });
+      });
+    </script>
+    <style>
+        form h3{
+            color: rgb(220, 136, 33);
+            margin-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">HighLAnder</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Human Resources</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Human Resources</a></li>
+            <li><a href="complain.html">HR Complaint</a></li>
+            <li><a href="rule.html">Rules And Regulation</a></li>
+            <li><a href="calander.html">Calender</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Staff Tour</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Tour</a></li>
+            <li><a href="travel.html">Travel Authorization</a></li>
+            <li><a href="status.html">Travel Status</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Staff Service</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Service</a></li>
+            <li><a href="leave.html">Leave Application</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="resignation.html">Resignation</a></li>
+            <li><a href="publication.html">Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Inventory And Property</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventory And Property</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="profile_pic.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Kunzang</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text"></span>
+        <div class="wrapper">
+          <div class="navbar">
+            <div class="navbar_left">
+              <div class="logo">
+                <a href="#">HighLAnder</a>
+              </div>
+            </div>
+            <div class="navbar_right">
+              <div class="notifications">
+                <!-- <div class="icon_wrap"><i class="far fa-bell"></i></div> -->
+                <a class="icon_wrap" href="profile.html#timeline">
+                  <i class="far fa-bell"></i
+                ></a>
+              </div>
+              <div class="profile">
+                <div class="icon_wrap">
+                  <img src="profile_pic.png" alt="profile_pic" />
+                  <span class="name">Kunzang Rada</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="profile_dd">
+                  <ul class="profile_ul">
+                    <li class="profile_li">
+                      <a class="profile" href="profile.html"
+                        ><span class="picon"
+                          ><i class="fas fa-user-alt"></i> </span
+                        >Profile</a
+                      >
+                      <!-- <div class="btn">My Account</div> -->
+                    </li>
+                    <li>
+                      <a class="address" href="changePaaword.html"
+                        ><span class="picon"
+                          ><i class="fas fa-map-marker"></i></span
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="settings" href="help.html"
+                        ><span class="picon"><i class="fas fa-cog"></i></span
+                        >Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="logout" href="login.html"
+                        ><span class="picon"
+                          ><i class="fas fa-sign-out-alt"></i></span
+                        >Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <body style="padding:10px;border:2px black;background-color: lavenderblush;">
+       <div style="border:2px black;padding:20px;padding-top:65px; "> <h1>Rules And Regulation Of Hotel HighLAnder</h1>
+        <p>   1. Hotel rooms are rented for hotel days.</p><br>
+        <p>2. A hotel day starts at 2:00 p.m. on the day of arrival and ends at 12:00 a.m. of the following day. Failure to check out by 12:00 p.m. will result in an additional fee for extending a hotel day. A charge for the extension until 4:00 p.m. amounts to PLN 80.00, after 4:00 p.m. the hotel will charge for an additional hotel day.
+        </p><br>
+        <p>3. The hotel reserves the right to pre-authorize your credit card upon check-in or collect a fee for the entire stay in the form of a cash deposit.
+        </p><br>
+        <p>4. In case the guest fails to appear in the hotel by 6 p.m. of the accommodation day despite making a reservation, the fee for the room shall be charged by the hotel.
+        </p><br>
+        <h3>§2
+        </h3>
+        <p>1. The hotel guest cannot hand over a room to third persons, even if the period for which the guest paid has not yet expired.
+        </p><br>
+        <p>2. Persons who are not checked in the hotel may stay in a hotel room from 07:00 a.m. till 10:00 p.m. Persons staying in a room after 10:00 p.m. must check in the hotel.
+        </p><br><br>
+       
+        <h3>§3</h3>
+        <p>1. The hotel renders services in accordance with its category and standard. Guests are requested to submit any complaints regarding the quality of services at the reception desk as soon as possible, thus allowing for the hotel's immediate reaction.
+        </p><br>
+        <p>2. The hotel is obliged to ensure:
+        </p><br>
+        <p>A) conditions for full and undisturbed rest of the guest
+        </p><br>
+        <p>B) safety of stay and privacy. Every guest provides its consent to processing their personal information for the purposes of checking in and placing its data in the hotel database as per the Personal Data Protection Act of 29.10.1997. (Journal of Laws of 1997, no. 133, item 883 as later amended). The guest has the right to review and correct its personal data.
+        </p><br>
+        <p>C) professional and polite service in respect of all services rendered by the hotel
+        </p><br><br>
+        <h3>$4</h3>
+        <p>1. At the guest's request, the hotel renders the following free-of-charge services:
+        </p><br>
+        <p>A) information concerning the guest's stay and travel
+        </p><br>
+        <p>B) wake-up call at a time specified
+        </p><br>
+        <p>C) storage of money and valuable belongings during the stay
+        </p><br><br>
+   
+        <h3>§5</h3>
+        <p>1. The hotel's liability for any loss or damage of items brought in by guests to the hotel is regulated by provisions of articles 846-849 of the Civil Code. The hotel's liability shall be limited if such items are not deposited at the reception. The hotel has the right to refuse to store money, securities and valuable belongings, especially valuables and items of scientific or artistic value if they pose a threat to safety or their value exceeds the standard of the hotel or if they take up too much space.
+        </p><br>
+        <p>2. The guest should notify the hotel's reception desk immediately upon noticing any damage.
+        </p><br><br>
+        <h3>§6
+        </h3>
+        <p>1. The lights-out period starts at 10:00 p.m. and ends at 07:00 a.m. of the following day.
+        </p><br>
+        <p>2. Conduct of guests and persons using services of the hotel should not disturb the peaceful stay of other guests. The hotel may refuse to render services to a person violating the above rule.
+        </p><br><br>
+        <h3>§7
+        </h3>
+        <p>1. When leaving the room, guests are expected to check whether the door is properly locked. Loss of a room card/key is subject to an extra charge of PLN 50.00.
+        </p><br>
+        <p>2. The hotel guest bears financial liability for damaging or destroying the hotel's equipment and technical devices due to their fault or due to the fault of their visitors.
+        </p><br>
+        <p>3. Room heaters, electric irons and other similar devices which are not a part of the hotel room equipment are not allowed to be used inside the rooms due to the fire safety.
+        </p>
+  </div>
+    </body>
+    </html>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+    <!-- <script src="leave.js"></script> -->
+  </body>
+</html>

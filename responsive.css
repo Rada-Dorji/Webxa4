@@ -1,0 +1,14 @@
+@media screen and (max-width: 800px) {
+  .feedform {
+    width: 300px;
+    height: 80vh;
+  }
+  .input-box {
+    width: 300px;
+    height: 5vh;
+  }
+}
+
+/* responsible layout-when the screen is less than 600px wide */
+@media screen and (max-width: 1000px) {
+}

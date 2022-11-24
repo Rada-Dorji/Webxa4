@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- for table-->
+    <link rel="stylesheet" href="table.css" />
+    <!-- for table -->
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboardContent.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".profile .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+
+        $(".notifications .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+
+        $(".show_all .link").click(function () {
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+
+        $(".close").click(function () {
+          $(".popup").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">HighLAnder</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Human Resources</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Human Resources</a></li>
+            <li><a href="rule.html">Rules And Regulation</a></li>
+            <li><a href="calander.html">Calender</a></li>
+            <li><a href="complain.html">HR Complaint Form</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Staff Tour</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Tour</a></li>
+            <li><a href="travel.html">Travel Authorization</a></li>
+            <li><a href="status.html">Travel Status</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Staff Service</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Service</a></li>
+            <li><a href="leave.html">Leave Application</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="resignation.html">Resignation</a></li>
+            <li><a href="publication.html">Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Inventory And Property</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventory And Property</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="profile_pic.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Kunzang</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text"></span>
+        <div class="wrapper">
+          <div class="navbar">
+            <div class="navbar_left">
+              <div class="logo">
+                <a href="#">HighLAnder</a>
+              </div>
+            </div>
+
+            <div class="navbar_right">
+              <div class="notifications">
+                <!-- <div class="icon_wrap"><i class="far fa-bell"></i></div> -->
+                <a class="icon_wrap" href="profile.html#timeline">
+                  <i class="far fa-bell"></i
+                ></a>
+              </div>
+              <div class="profile" style="z-index: 100">
+                <div class="icon_wrap">
+                  <img src="profile_pic.png" alt="profile_pic" />
+                  <span class="name">Kunzang Rada</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="profile_dd">
+                  <ul class="profile_ul">
+                    <li class="profile_li">
+                      <a class="profile" href="profile.html"
+                        ><span class="picon"
+                          ><i class="fas fa-user-alt"></i> </span
+                        >Profile</a
+                      >
+                      <!-- <div class="btn">My Account</div> -->
+                    </li>
+                    <li>
+                      <a class="address" href="changePaaword.html"
+                        ><span class="picon"
+                          ><i class="fas fa-map-marker"></i></span
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="settings" href="help.html"
+                        ><span class="picon"><i class="fas fa-cog"></i></span
+                        >Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="logout" href="login.html"
+                        ><span class="picon"
+                          ><i class="fas fa-sign-out-alt"></i></span
+                        >Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboardContainer">
+        <div class="nestedContainer">
+          <div class="item" id="item2">
+            <div class="card">
+              <div class="fakeimg1"><img src="" alt="" /></div>
+              <div class="card-body">
+                <h3 class="card-title">Staff Tour</h3>
+                <p>
+                  <a href="travel.html"
+                    ><button>
+                      Travel Authorization
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="status.html"
+                    ><button>
+                      Travel Status
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item" id="item4">
+            <div class="card">
+              <div class="fakeimg1"><img src="" alt="" /></div>
+              <div class="card-body">
+                <h3 class="card-title">Staff Service</h3>
+                <p>
+                  <a href="leave.html"
+                    ><button>
+                      Leave application
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="promotion.html"
+                    ><button>
+                      Promotion
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="resignation.html"
+                    ><button>
+                      Resignation
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="publication.html"
+                    ><button>
+                      Publication
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item" id="item3">
+            <div class="card">
+              <div class="fakeimg1"><img src="" alt="" /></div>
+              <div class="card-body">
+                <h3 class="card-title">Human Resources</h3>
+                <p>
+                  <a href="complain.html"
+                    ><button>
+                      HR complaint Form
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="rule.html"
+                    ><button>
+                      Rules And Regualtion
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="calander.html"
+                    ><button>
+                      Calendar
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item" id="item1">
+            <div class="card">
+              <div class="fakeimg1">
+                <img src="" alt="" />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Inventory And Property</h3>
+                <p>
+                  <a href="reservation.html"
+                    ><button>
+                      Reservation
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="orders.html"
+                    ><button>
+                      Orders
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+                <p>
+                  <a href="feedback.html"
+                    ><button>
+                      Feedback
+                      <i
+                        class="bx bx-down-arrow-circle bx-rotate-270"
+                      ></i></button
+                  ></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item" id="profile">
+            <div class="profileContainer">
+              <h1>HighLAnder</h1>
+              <div class="row">
+                <div
+                  class="col-1"
+                  style="margin-left: 15px; margin-top: 20px; line-height: 1.6"
+                >
+                  <p><strong>Name:</strong> Kuenzang</p>
+                  <p><strong>Work Place:</strong> HighLAnder hotel</p>
+                  <p><strong>Position:</strong> Manager</p>
+                  <p><strong>Joined on:</strong> July 24<sup>th</sup>, 2018</p>
+                  <p><strong>Present Year:</strong> 2022</p>
+                </div>
+              </div>
+              <div class="cardP">
+                <div class="card-bodyP">
+                  <p>
+                    For detail, Click the View Profile button
+                    <a href="profile.html"
+                      ><button class="buttonP">
+                        View Profile
+                        <i class="bx bxs-user"></i></button
+                    ></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item" id="Workerattendance">
+            <div class="cardA">
+              <div class="card-bodyA">
+                <h3 style="border: 1px solid rgb(73, 46, 46)">
+                  Your Attendance
+                </h3>
+                <table class="programs">
+                  <colgroup>
+                    <col class="MonthColumn" />
+                    <!-- <col class="wDaycolumns" span="5" /> -->
+                    <!-- <col class="wEndColumns" span="2" /> -->
+                  </colgroup>
+
+                  <thead>
+                    <tr>
+                      <th>Month</th>
+                      <th>Day</th>
+                      <th>Absent/Leave</th>
+                      <th>Reason</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>January</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>Febuary</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>March</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>April</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>May</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>June</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>July</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>August</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>September</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>October</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>November</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                    <tr>
+                      <th>December</th>
+                      <td colspan="1">5</td>
+                      <td rowspan="1">Leave</td>
+                      <td rowspan="1">Sick</td>
+                      <td rowspan="1"><button>Action</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="item" id="schedule">
+            <div class="cardS">
+              <div class="card-body">
+                <h3 style="border: 1px solid rgb(73, 46, 46)">
+                  Working Schedule
+                </h3>
+                <table class="programs">
+                  <colgroup>
+                    <col class="MonthColumn" />
+                    <!-- <col class="wDaycolumns" span="5" />
+                    <col class="wEndColumns" span="2" /> -->
+                  </colgroup>
+
+                  <thead>
+                    <tr>
+                      <th class="time">Time</th>
+                      <th>9:00am - 10am</th>
+                      <th>10:00am - 12:00pm</th>
+                      <th>12:00pm-1:00pm</th>
+                      <th>1:00pm - 5:30pm</th>
+                      <th>5:30pm - 6:30pm</th>
+                      <th>6:30pm - 8:30pm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Monday</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                    <tr>
+                      <th>Tuesday</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                    <tr>
+                      <th>Wenesday</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                    <tr>
+                      <th>Thursday</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                    <tr>
+                      <th>Fridy</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                    <tr>
+                      <th>Saturday</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                    <tr>
+                      <th>Sunday</th>
+                      <td colspan="1">Rounding up the Staff</td>
+                      <td rowspan="1">
+                        Working on the hotel finance and facilities
+                      </td>
+                      <td rowspan="1">Lunch break</td>
+                      <td colspan="1">Assisting the customer service team</td>
+                      <td rowspan="1">Tea break</td>
+                      <td rowspan="1">Night duty</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>

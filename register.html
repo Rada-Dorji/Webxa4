@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Student Form</title>
+  </head>
+  <body>
+    <div class="container1" id="container1">
+      <form action="sucess.html" method="get" autocomplete="off">
+        <h3>Register</h3>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="text"
+              id="Username"
+              name="Username"
+              placeholder="Username"
+            />
+            <!-- <i class="bx bxs-user"></i> -->
+            <small></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <small></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="tel"
+              id="contact-no"
+              name="contact-no"
+              placeholder="Contact-no"
+            />
+            <small></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="tel"
+              id="CID"
+              name="CID"
+              placeholder="Citizenship ID"
+            />
+            <small></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password "
+            />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="confirm Password"
+            />
+            <small></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="date"
+              required
+            />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="row submit-btn" id="register-btn">
+          <button type="submit" value="Login">Register</button>
+          <button type="reset" onclick="reset">Reset</button>
+        </div>
+
+        <p class="form-footer" style="margin-top: 10px">
+          Already a member ? <a href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+    <hr />
+
+    <script src="register.js"></script>
+  </body>
+</html>

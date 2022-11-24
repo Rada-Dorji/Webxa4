@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="help.css" />
+    <link rel="stylesheet" href="leave.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+        $(".notifications .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+        $(".show_all .link").click(function () {
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+        $(".close").click(function () {
+          $(".popup").hide();
+        });
+      });
+    </script>
+    <style>
+        form h3{
+            color: rgb(220, 136, 33);
+            margin-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">HighLAnder</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Human Resources</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Human Resources</a></li>
+            <li><a href="complain.html">HR Complaint</a></li>
+            <li><a href="rule.html">Rules And Regulation</a></li>
+            <li><a href="calander.html">Calender</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Staff Tour</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Tour</a></li>
+            <li><a href="travel.html">Travel Authorization</a></li>
+            <li><a href="status.html">Travel Status</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Staff Service</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Service</a></li>
+            <li><a href="leave.html">Leave Application</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="resignation.html">Resignation</a></li>
+            <li><a href="publication.html">Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Inventory And Property</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventory And Property</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="profile_pic.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Kunzang</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text"></span>
+        <div class="wrapper">
+          <div class="navbar">
+            <div class="navbar_left">
+              <div class="logo">
+                <a href="#">HighLAnder</a>
+              </div>
+            </div>
+
+            <div class="navbar_right">
+              <div class="notifications">
+                <!-- <div class="icon_wrap"><i class="far fa-bell"></i></div> -->
+                <a class="icon_wrap" href="profile.html#timeline">
+                  <i class="far fa-bell"></i
+                ></a>
+              </div>
+              <div class="profile">
+                <div class="icon_wrap">
+                  <img src="profile_pic.png" alt="profile_pic" />
+                  <span class="name">Kunzang Rada</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="profile_dd">
+                  <ul class="profile_ul">
+                    <li class="profile_li">
+                      <a class="profile" href="profile.html"
+                        ><span class="picon"
+                          ><i class="fas fa-user-alt"></i> </span
+                        >Profile</a
+                      >
+                      <!-- <div class="btn">My Account</div> -->
+                    </li>
+                    <li>
+                      <a class="address" href="changePaaword.html"
+                        ><span class="picon"
+                          ><i class="fas fa-map-marker"></i></span
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="settings" href="help.html"
+                        ><span class="picon"><i class="fas fa-cog"></i></span
+                        >Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="logout" href="login.html"
+                        ><span class="picon"
+                          ><i class="fas fa-sign-out-alt"></i></span
+                        >Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 style="padding-top:60px ;">Hotel-IMS HELP</h1><br>
+      <div class="navbar2">
+        <!-- <h3><a href="#home">Human Resources</a></h3>
+        <a href="#news">News</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">Human Resources
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Rules And Regulation</a>
+            <a href="#">Hotel Calendar</a>
+          </div>
+        </div>
+          <div class="dropdown">
+            <button class="dropbtn">Staff Tour
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Travel Authorization</a>
+              <a href="#">Travel Status</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Inventory And Property
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Feedback</a>
+              <a href="#">Reservation</a>
+              <a href="#">Order Taking</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Staff Services</button>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Leave Managenent</a>
+              <a href="#">Promotion</a>
+              <a href="#">Resignation</a>
+              <a href="#">Publication</a>
+            </div>
+          </div>
+      </div>
+      <div class="Staff Services" style="padding-top:20px; padding-left:10px;"><br><br>
+        <h2>Leave Managenent</h2><br>
+        <p>If you want to take a leave , you should fill it up the form with relaible reasons.</p><br>
+        <p>It means when employee leaves the hotel for certain reasons with prior permission from the college authority.
+        </p><br>
+        <p>CEO Affairs or Hotel Manager will approve the leave.</p>
+        <img src="LM.png" alt="">
+        <br><br>
+       <h2>Promotion</h2><br>
+       <p>Employee will need to submit the the promotion requs form to CEO fro promoting your grade.</p><br>
+       <p>You should Fill up all the form with relaible reasons...and promotion really needs supperting evidence for the promotion.</p>
+        <p>You need your skills and experience to be filled in it.</p><br>
+        <img src="pro (1).png" alt="">
+        <img src="pro (2).png" alt=""><br><br>
+        <h2>Resignation</h2><br>
+        <p>You need to submit this red=sigantion form to resign form the post you are working but you should have reason behind the decsion.</p><br>
+        <img src="rg.png" alt=""><br><br>
+        <h3>Publication</h3><br>
+        <p></p><br>
+        <p></p><br>
+        <img src="pub.png" alt=""><br><br>
+      </div>
+      <div class="Human Resources">
+        <h2>Rules And Regulation</h2><br>
+        <p>As a employee of HighLAder Hotel, you nedd to follow certain rules and regualtion.</p><br>
+        <img src="rule (2).png" alt="">
+        <img src="rule" alt=""><br><br>
+        <h2>Calender</h2><br>
+        <P>It is event calender for Hotel HighLAnder and can add event on it.</P>
+        <img src="" alt="">
+      </div>
+      <div class="Staff Tour">
+        <h2>Travel Authorization</h2><br>
+        <p>Employee must take permission like leave for travelling from CEO</p><br>
+        <p>The form must be filled</p>
+        <img src="travel.png" alt="">
+        <img src="travel (2).png" alt=""><br><br>
+        <h2>Travel Status</h2><br>
+        <P>It is event calender for Hotel HighLAnder and can add event on it.</P>
+        <img src="status.png" alt=""><br>
+      </div>
+      <div class="Inventory andn Property">
+       <h2>Reservation</h2><br>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aut rem voluptatibus earum iste soluta eveniet quo, placeat ipsum repellendus, fugiat doloremque quae labore reiciendis impedit nostrum corporis. Quod, iure!</p><br>
+        <img src="reser.png" alt="">
+        <img src="reser (2).png" alt="">
+        <h3>Feedback</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas modi laborum eos culpa expedita, labore officia, officiis maiores in nesciunt exercitationem eaque architecto ad nostrum unde eius magnam a!</p><br>
+        <img src="feed.png" alt="">
+        <img src="feed (2).png" alt="">
+        <h4>Order</h4><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptate laboriosam quam mollitia totam praesentium natus excepturi itaque amet distinctio eius et iure quis inventore ratione hic, numquam nisi delectus.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error incidunt optio impedit aliquid, ratione dicta tempore, porro nostrum enim, neque corporis. Reprehenderit reiciendis doloremque consequuntur temporibus autem earum voluptatem.</p><br>
+        <img src="order.png" alt=""><br><br>
+      </div>
+     </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>

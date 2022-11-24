@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="leave.css" />
+    <!-- <link rel="stylesheet" href="promotion.css"> -->
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".profile .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+
+        $(".notifications .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+
+        $(".show_all .link").click(function () {
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+
+        $(".close").click(function () {
+          $(".popup").hide();
+        });
+      });
+    </script>
+    <style>
+        
+        form h3{
+            color: rgb(220, 136, 33);
+            margin-top: 10px;
+        }
+    </style>
+ 
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">HighLAnder</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Human Resources</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Human Resources</a></li>
+            <li><a href="complain.html">HR Complaint</a></li>
+            <li><a href="rule.html">Rules And Regulation</a></li>
+            <li><a href="calander.html">Calender</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Staff Tour</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Tour</a></li>
+            <li><a href="travel.html">Travel Authorization</a></li>
+            <li><a href="status.html">Travel status</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Staff Service</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Service</a></li>
+            <li><a href="leave.html">Leave Application</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="resignation.html">Resignation</a></li>
+            <li><a href="publication.html">Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Inventory And Property</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventory And Property</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+      
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="profile_pic.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Kunzang</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content" >
+        <i class="bx bx-menu"></i>
+        <span class="text"></span>
+        <div class="wrapper">
+          <div class="navbar">
+            <div class="navbar_left">
+              <div class="logo">
+                <a href="#">HighLAnder</a>
+              </div>
+            </div>
+
+            <div class="navbar_right">
+              <div class="notifications">
+                <!-- <div class="icon_wrap"><i class="far fa-bell"></i></div> -->
+                <a class="icon_wrap" href="profile.html#timeline">
+                  <i class="far fa-bell"></i
+                ></a>
+              </div>
+              <div class="profile">
+                <div class="icon_wrap">
+                  <img src="profile_pic.png" alt="profile_pic" />
+                  <span class="name">Kunzang Rada</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="profile_dd">
+                  <ul class="profile_ul">
+                    <li class="profile_li">
+                      <a class="profile" href="profile.html"
+                        ><span class="picon"
+                          ><i class="fas fa-user-alt"></i> </span
+                        >Profile</a
+                      >
+                      <!-- <div class="btn">My Account</div> -->
+                    </li>
+                    <li>
+                      <a class="address" href="changePaaword.html"
+                        ><span class="picon"
+                          ><i class="fas fa-map-marker"></i></span
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="settings" href="help.html"
+                        ><span class="picon"><i class="fas fa-cog"></i></span
+                        >Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="logout" href="login.html"
+                        ><span class="picon"
+                          ><i class="fas fa-sign-out-alt"></i></span
+                        >Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        
+        <div class="content" >
+            
+          <p>
+            <h1 >Promotion Request Form</h1>
+            <hr style="margin-bottom: 20px;">
+
+            ***Please note that any forgery of documents and detail will be the the sole responsible of the you, therefore you will be liable for any kind of punishment.
+          </p>
+          <br />
+          <strong
+            ><p>
+              
+            </p></strong
+          >
+          <form action="sucess.html" method="get" class="form">
+            <div class="form">
+                <h3>Position Applying To;</h3>
+                <hr style="margin-top: 10px;">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details"><b>Title:</b></span>
+                    <input type="text" placeholder="Position title" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Location</b></span>
+                    <input type="datetime-local" placeholder="Location" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Department</b></span>
+                    <input type="tel" placeholder="Department name" required />
+                  </div>
+            </div>
+            <div  class="form">
+                <h3>Employee Information;</h3>
+                <hr style="margin-top: 10px;">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details"><b>Employee Name</b></span>
+                    <input type="text" placeholder="Full Name" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Department</b></span>
+                    <input type="tel" placeholder="Department name" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Date Applied</b></span>
+                    <input type="datetime-local" placeholder="Date Applied" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Employee ID</b></span>
+                    <input type="tel" placeholder="ID" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Contact Number</b></span>
+                    <input type="tel" placeholder="Contact Number" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Email</b></span>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+            </div>
+            <div  class="form">
+                <h3>Current Position;</h3>
+                <hr style="margin-top: 10px;">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details"><b>Current Job Title</b></span>
+                    <input type="text" placeholder="Current Job Title" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Department</b></span>
+                    <input type="tel" placeholder="Department name" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Address</b></span>
+                    <input type="text" placeholder="Address" required />
+                  </div>
+                  <br />
+                  <div class="input-box">
+                    <span class="details"><b>Date Of Hire;</b></span>
+                    <input type="datetime-local" placeholder="Date Of Hire" required />
+                  </div>
+            </div>
+            <h3>Skill/Experience;</h3>
+            <hr style="margin-top: 10px;">
+              
+              <div class="input-box" style="margin-top:10px ;">
+                <span class="details" style="width: 500px;"><b>Describe your work experience as it relates to this position</b></span>
+                <textarea
+                  id="text-reason"
+                  type="text"
+                  placeholder="Type leave reason..."
+                  rows="7"
+                  cols="120"
+                  required
+                ></textarea>
+              </div>
+              <br />
+
+              <div class="input-box">
+                <span class="details"><b>Supporting Document(optional)</b></span>
+                <input type="file" placeholder="Upload.." required />
+              </div>
+              <br />
+            
+            <div class="rbutton-details">
+              <input type="radio" name="rbutton" id="dot-1" />
+              <input type="radio" name="rbutton" id="dot-2" />
+              <input type="radio" name="rbutton" id="dot-3" />
+              <span class="rbutton-title"><b> Allow Notification</b></span>
+              <div class="category">
+                <label for="dot-1">
+                  <span class="dot one"></span>
+                  <span class="rbutton">YES</span>
+                </label>
+                <label for="dot-2">
+                  <span class="dot two"></span>
+                  <span class="rbutton">NO</span>
+                </label>
+                <label for="dot-3">
+                  <span class="dot three"></span>
+                  <span class="rbutton">Calls Only</span>
+                </label>
+              </div>
+            </div>
+            <br />
+              <div id="leave-btn">
+                <button type="submit" value="Submit">Submit</button>
+                <button type="reset" onclick="reset">Reset</button>
+              </div>
+            <br />
+          </form>
+        </div>
+      </div>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>

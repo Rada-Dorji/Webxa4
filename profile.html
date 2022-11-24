@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- profile link -->
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- add style css  -->
+    <link href="Profile.css" rel="stylesheet" />
+    <!-- profile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".profile .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".notifications").removeClass("active");
+        });
+
+        $(".notifications .icon_wrap").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+
+        $(".show_all .link").click(function () {
+          $(".notifications").removeClass("active");
+          $(".popup").show();
+        });
+
+        $(".close").click(function () {
+          $(".popup").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus"></i>
+        <span class="logo_name">HighLAnder</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Human Resources</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Human Resources</a></li>
+            <li><a href="complain.html">HR Complaint</a></li>
+            <li><a href="rule.html">Rules And Regulation</a></li>
+            <li><a href="calander.html">Calender</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Staff Tour</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Tour</a></li>
+            <li><a href="travel.html">Travel Authorization</a></li>
+            <li><a href="status.html">Travel Status</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="link_name">Staff Service</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Staff Service</a></li>
+            <li><a href="leave.html">Leave Application</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="resignation.html">Resignation</a></li>
+            <li><a href="publication.html">Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="link_name">Inventory And Property</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Inventory And Property</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="profile_pic.png" alt="profileImg" />
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Kunzang</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text"></span>
+        <div class="wrapper">
+          <div class="navbar">
+            <div class="navbar_left">
+              <div class="logo">
+                <a href="#">HighLAnder</a>
+              </div>
+            </div>
+
+            <div class="navbar_right">
+              <div class="notifications">
+                <!-- <div class="icon_wrap"><i class="far fa-bell"></i></div> -->
+                <a class="icon_wrap" href="#timeline">
+                  <i class="far fa-bell"></i
+                ></a>
+              </div>
+              <div class="profile" style="z-index: 10000">
+                <div class="icon_wrap">
+                  <img src="profile_pic.png" alt="profile_pic" />
+                  <span class="name">Kunzang Rada</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="profile_dd">
+                  <ul class="profile_ul">
+                    <li class="profile_li">
+                      <a class="profile" href="profile.html"
+                        ><span class="picon"
+                          ><i class="fas fa-user-alt"></i> </span
+                        >Profile</a
+                      >
+                      <!-- <div class="btn">My Account</div> -->
+                    </li>
+                    <li>
+                      <a class="address" href="changePaaword.html"
+                        ><span class="picon"
+                          ><i class="fas fa-map-marker"></i></span
+                        >Change Password</a
+                      >
+                    </li>
+                    <li>
+                      <a class="settings" href="help.html"
+                        ><span class="picon"><i class="fas fa-cog"></i></span
+                        >Help</a
+                      >
+                    </li>
+                    <li>
+                      <a class="logout" href="login.html"
+                        ><span class="picon"
+                          ><i class="fas fa-sign-out-alt"></i></span
+                        >Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <link
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+          rel="stylesheet"
+        />
+
+        <div class="container bootstrap snippets bootdey">
+          <div class="row">
+            <!-- BEGIN USER PROFILE -->
+            <div class="col-md-12">
+              <div class="grid profile">
+                <div class="grid-header">
+                  <div class="col-xs-2">
+                    <img src="profile_pic.png" class="img-circle" alt="logo" />
+                  </div>
+                  <div class="col-xs-7">
+                    <h3>Kunzang Cheki</h3>
+                    <p>@Kcheki</p>
+                    <p>Manager Assistant</p>
+                    <p>Gyalpozhing,Mongar</p>
+                  </div>
+                  <div class="col-xs-3 text-right">
+                    <!-- <p>
+                              <a href="https://soengsouy.com" title="Everyone can see your profile">
+                                  <i class="fa fa-globe"></i>
+                              </a>
+                          </p> -->
+                  </div>
+                </div>
+                <div class="grid-body">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#profile" data-toggle="tab">Profile</a>
+                    </li>
+                    <li class="">
+                      <a href="#timeline" data-toggle="tab">Timeline</a>
+                    </li>
+                    <li class="">
+                      <a href="#settings" data-toggle="tab">Settings</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <!-- BEGIN PROFILE -->
+                    <div class="tab-pane active" id="profile">
+                      <p class="lead">My Profile</p>
+                      <hr />
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p>
+                            <strong>Email:</strong>
+                            <a href="kunzang.com">kcheki46@gmail.com</a>
+                          </p>
+                          <p>
+                            <strong>Website:</strong>
+                            <a href="kunzang.com">kcheki.com</a>
+                          </p>
+                          <p><strong>About:</strong>Great Manager</p>
+                          <p>
+                            <strong>Joined on:</strong> July 24<sup>th</sup>,
+                            2018
+                          </p>
+                          <p>
+                            <strong>Hobbies:</strong> Read books, Reseach
+                            internet, cook food and Beverage
+                          </p>
+                          <p>
+                            <strong>Skills:</strong>
+                            <span class="label label-primary">COOK</span>,
+                            <span class="label label-primary">Team Leader</span
+                            >, <span class="label label-primary">CODING</span>,
+                            <span class="label label-primary">Honesty</span>
+                          </p>
+                        </div>
+
+                        <div class="col-md-6">
+                          <p>
+                            <strong>Address:</strong> Gyalpozhing, Mongar,
+                            Thimphu
+                          </p>
+                          <p><strong>Phone:</strong>77882444</p>
+                          <p><strong>Phone + Ext:</strong>0179752</p>
+                          <p>
+                            <strong>Reputation:</strong>
+                            <span class="text-green"
+                              ><i class="fa fa-angle-up"></i> 12000</span
+                            >
+                          </p>
+                          <p>
+                            <strong>Rating:</strong>
+                            <span class="text-yellow"
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star-half-o"></i
+                            ></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END PROFILE -->
+
+                    <!-- BEGIN TIMELINE -->
+                    <div class="tab-pane" id="timeline">
+                      <p class="lead">My Timeline</p>
+                      <hr />
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="timeline-centered">
+                            <article class="timeline-entry">
+                              <div class="timeline-entry-inner">
+                                <time
+                                  class="timeline-time"
+                                  datetime="2014-01-10T03:45"
+                                  ><span>11:41 AM</span>
+                                  <span>Today</span></time
+                                >
+
+                                <div class="timeline-icon bg-primary">
+                                  <i class="fa fa-home"></i>
+                                </div>
+
+                                <div class="timeline-label">
+                                  <h2>
+                                    <a href="#">Jeffrey Williams</a>
+                                    <span>posted a status update</span>
+                                  </h2>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.
+                                  </p>
+                                </div>
+                              </div>
+                            </article>
+
+                            <article class="timeline-entry left-aligned">
+                              <div class="timeline-entry-inner">
+                                <time
+                                  class="timeline-time"
+                                  datetime="2014-01-10T03:45"
+                                  ><span>08:12 AM</span>
+                                  <span>Today</span></time
+                                >
+
+                                <div class="timeline-icon bg-warning">
+                                  <i class="fa fa-bell"></i>
+                                </div>
+
+                                <div class="timeline-label">
+                                  <h2><a href="#">Job Meeting</a></h2>
+                                  <p>
+                                    You have a meeting at
+                                    <strong>10:00 AM</strong> in the
+                                    <strong>Meeting Room</strong>.
+                                  </p>
+                                </div>
+                              </div>
+                            </article>
+
+                            <article class="timeline-entry">
+                              <div class="timeline-entry-inner">
+                                <time
+                                  class="timeline-time"
+                                  datetime="2014-01-10T03:45"
+                                  ><span>02:10 AM</span>
+                                  <span>15/06/2014</span></time
+                                >
+
+                                <div class="timeline-icon bg-danger">
+                                  <i class="fa fa-user"></i>
+                                </div>
+
+                                <div class="timeline-label">
+                                  <h2>
+                                    <a href="#">Larry Gardner</a>
+                                    <span>changed his</span>
+                                    <a href="#">Profile Picture</a>
+                                  </h2>
+                                  <blockquote>
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.
+                                  </blockquote>
+                                  <img
+                                    src="assets/image/logo.png"
+                                    class="img-responsive img-rounded full-width"
+                                    alt=""
+                                    width="50%"
+                                  />
+                                </div>
+                              </div>
+                            </article>
+
+                            <article class="timeline-entry begin">
+                              <div class="timeline-entry-inner">
+                                <div class="timeline-icon bg-default">
+                                  <i class="fa fa-laptop"></i>
+                                </div>
+                              </div>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END TIMELINE -->
+
+                    <!-- BEGIN SETTINGS -->
+                    <div class="tab-pane" id="settings">
+                      <p class="lead">My Settings</p>
+                      <hr />
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-horizontal">
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label"
+                                >Global Notifications</label
+                              >
+                              <div class="col-sm-2">
+                                <input type="checkbox" />
+                              </div>
+                              <label class="col-sm-2 control-label"
+                                >Email Notifications</label
+                              >
+                              <div class="col-sm-2">
+                                <input type="checkbox" />
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label"
+                                >Phone Notifications</label
+                              >
+                              <div class="col-sm-2">
+                                <input type="checkbox" />
+                              </div>
+                              <label class="col-sm-2 control-label"
+                                >Mail Notifications</label
+                              >
+                              <div class="col-sm-2">
+                                <input type="checkbox" />
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label"
+                                >Subscribe Newsletters</label
+                              >
+                              <div class="col-sm-2">
+                                <input type="checkbox" />
+                              </div>
+                              <label class="col-sm-2 control-label"
+                                >RSS Feeds</label
+                              >
+                              <div class="col-sm-2">
+                                <input type="checkbox" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END SETTINGS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END USER PROFILE -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- prifile -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+    <!--profile  -->
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>
